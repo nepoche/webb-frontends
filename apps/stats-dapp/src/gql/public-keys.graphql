@@ -1,0 +1,68 @@
+query PublicKeys($PerPage: Int, $offset: Int) {
+  publicKeys(first: $PerPage, offset: $offset, orderBy: [SESSIONS_SUM_BLOCK_NUMBER_DESC]) {
+    nodes {
+      id
+      compressed
+      uncompressed
+      history
+      block {
+        timestamp
+        number
+      }
+      sessions(first: 1) {
+        nodes {
+          id
+          ...SessionAuth
+          keyGenThreshold
+          signatureThreshold
+          block {
+          timestamp
+            number
+          }
+        }
+      }
+    }
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    totalCount
+  }
+}
+query PublicKey($id: String!) {
+  publicKey(id: $id) {
+    id
+    compressed
+    uncompressed
+    history
+    block {
+      timestamp
+      number
+    }
+    sessions(first: 1) {
+      nodes {
+        id
+        ...SessionAuth
+        keyGenThreshold
+        signatureThreshold
+        block {
+          timestamp
+          number
+        }
+      }
+    }
+  }
+}
+
+query SessionKeyIds($keys: [String!]!) {
+  sessions(filter: { id: { in: $keys } }) {
+    nodes {
+      id
+      publicKey {
+        id
+      }
+    }
+  }
+}
