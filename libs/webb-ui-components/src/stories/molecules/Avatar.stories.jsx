@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Avatar } from '@nepoche/webb-ui-components/components';
+import { Avatar } from '../../components';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

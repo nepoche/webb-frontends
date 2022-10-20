@@ -1,5 +1,5 @@
 import { LabelProps as RdxLabelProps } from '@radix-ui/react-label';
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { WebbComponentBase } from '../../types';
 
 /**
  * The `Label` props

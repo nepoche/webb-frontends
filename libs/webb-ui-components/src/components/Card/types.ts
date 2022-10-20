@@ -1,6 +1,6 @@
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { WebbComponentBase } from '../../types';
 
 /**
  * The `Card` props
  */
-export interface CardProps extends WebbComponentBase {}
+export type CardProps = WebbComponentBase

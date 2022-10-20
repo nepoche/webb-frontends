@@ -1,4 +1,4 @@
-import { Typography } from '@nepoche/webb-ui-components/typography';
+import { Typography } from '../../typography';
 import React, { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 

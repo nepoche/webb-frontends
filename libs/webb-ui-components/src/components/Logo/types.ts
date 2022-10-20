@@ -1,4 +1,4 @@
-import { IconBase } from '@nepoche/webb-ui-components/icons/types';
+import { IconBase } from '../../icons/types';
 
 /**
  * The Logo props

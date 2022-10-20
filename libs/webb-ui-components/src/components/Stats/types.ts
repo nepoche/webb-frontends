@@ -1,4 +1,4 @@
-import { PropsOf, WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { PropsOf, IWebbComponentBase } from '../../types';
 
 import { TitleWithInfoProps } from '../TitleWithInfo/types';
 
@@ -7,6 +7,6 @@ export interface StatItem {
   value: string | number;
 }
 
-export interface StatsProps extends PropsOf<'div'>, WebbComponentBase {
+export interface StatsProps extends PropsOf<'div'>, IWebbComponentBase {
   items: Array<StatItem>;
 }

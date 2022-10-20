@@ -22,5 +22,5 @@ export interface AvatarGroupProps extends WebbComponentBase {
   /**
    * Children must be a list of Avatar components
    */
-  children: AvatarChildElement;
+  children: AvatarChildElement[];
 }

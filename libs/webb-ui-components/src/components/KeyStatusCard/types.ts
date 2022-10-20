@@ -1,5 +1,5 @@
 import { ISubQlTime } from '@nepoche/dapp-types';
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { WebbComponentBase } from '../../types';
 
 export type KeyType = 'current' | 'next';
 

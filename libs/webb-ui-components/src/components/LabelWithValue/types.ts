@@ -1,5 +1,5 @@
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
-import { WebbTypographyVariant } from '@nepoche/webb-ui-components/typography/types';
+import { WebbComponentBase } from '../../types';
+import { WebbTypographyVariant } from '../../typography/types';
 import { ReactElement } from 'react';
 
 /**

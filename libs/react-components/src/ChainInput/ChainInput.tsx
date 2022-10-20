@@ -3,7 +3,7 @@ import { chainsPopulated } from '@nepoche/dapp-config';
 import { useColorPallet } from '@nepoche/styled-components-theme';
 import { Flex } from '@nepoche/ui-components/Flex/Flex';
 import { Modal } from '@nepoche/ui-components/Modal/Modal';
-import { NetworkManager } from '@nepoche/react-components/NetworkManager/NetworkManager';
+import { NetworkManager } from '../NetworkManager/NetworkManager';
 import { Padding } from '@nepoche/ui-components/Padding/Padding';
 import { Pallet } from '@nepoche/styled-components-theme';
 import { above, useBreakpoint } from '@nepoche/responsive-utils';

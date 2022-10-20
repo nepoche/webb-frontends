@@ -143,7 +143,7 @@ export type ButtonContentProps = Pick<ButtonProps, ButtonContentPickKeys>;
 type ButtonTextPickKeys = 'size' | 'variant' | 'darkMode' | 'children' | 'isLoading';
 export type ButtonTextProps = Pick<ButtonProps, ButtonTextPickKeys>;
 
-type ButtonClassNames = {
+export type ButtonClassNames = {
   [key in ButtonVariant]: {
     base: {
       common: string;

@@ -1,4 +1,4 @@
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { WebbComponentBase } from '../../types';
 
 import { LabelWithValueProps } from '../LabelWithValue/types';
 
@@ -6,7 +6,7 @@ export type KeyValueWithButtonSize = 'sm' | 'md';
 
 type KeyValueWithButtonBasePickedKeys = 'isHiddenLabel' | 'valueVariant' | 'labelVariant';
 
-export interface KeyValueWithButtonBaseProps extends Pick<LabelWithValueProps, KeyValueWithButtonBasePickedKeys> {}
+export type KeyValueWithButtonBaseProps = Pick<LabelWithValueProps, KeyValueWithButtonBasePickedKeys>;
 
 /**
  * The `KeyValueWithButton` props

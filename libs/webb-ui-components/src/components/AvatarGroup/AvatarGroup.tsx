@@ -26,7 +26,7 @@ import { AvatarChildElement, AvatarGroupProps } from './types';
 export const AvatarGroup = forwardRef<HTMLDivElement, AvatarGroupProps>(
   ({ children: childrenProp, className, max = 3, total, ...props }, ref) => {
     const children: AvatarChildElement[] = useMemo(() => {
-      return React.Children.toArray(childrenProp).filter((child) => React.isValidElement(child));
+      return React.Children.toArray(childrenProp).filter((child) => React.isValidElement(child)) as AvatarChildElement[];
     }, [childrenProp]);
 
     const totalAvatars = useMemo(() => total || children.length, [children.length, total]);

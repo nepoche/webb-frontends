@@ -1,8 +1,8 @@
-import { PropsOf, WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { PropsOf, IWebbComponentBase } from '../../types';
 
 import { InputProps } from '../Input/types';
 
-export interface InputWrapperProps extends WebbComponentBase, PropsOf<'div'> {
+export interface InputWrapperProps extends IWebbComponentBase, PropsOf<'div'> {
   /**
    * The `id` prop for label and input
    * @default "amount"
@@ -115,7 +115,7 @@ export interface AmountInputProps extends InputWrapperProps {
   onMaxBtnClick?: PropsOf<'button'>['onClick'];
 }
 
-export interface FixedAmountProps extends InputWrapperProps {
+export interface FixedAmountProps extends Omit<InputWrapperProps, 'onChange'> {
   /**
    * The `id` prop for label and input
    * @default "amount"
@@ -139,7 +139,7 @@ export interface FixedAmountProps extends InputWrapperProps {
   onChange?: (nextVal: number) => void;
 }
 
-export interface RecipientInputProps extends InputWrapperProps {
+export interface RecipientInputProps extends Omit<InputWrapperProps, 'onChange'> {
   /**
    * The input value
    */

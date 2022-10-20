@@ -1,6 +1,6 @@
 import * as CollapsiblePrimitive from '@radix-ui/react-collapsible';
-import { ChevronDown } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
+import { ChevronDown } from '../../icons';
+import { Typography } from '../../typography';
 import cx from 'classnames';
 import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';

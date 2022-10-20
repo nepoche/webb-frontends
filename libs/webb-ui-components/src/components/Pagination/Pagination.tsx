@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight } from '@nepoche/webb-ui-components/icons';
-import { getPaginationItems } from '@nepoche/webb-ui-components/utils';
+import { ChevronLeft, ChevronRight } from '../../icons';
+import { getPaginationItems } from '../../utils';
 import cx from 'classnames';
 import React, { useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';

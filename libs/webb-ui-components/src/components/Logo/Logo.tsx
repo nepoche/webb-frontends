@@ -1,4 +1,4 @@
-import { createIcon } from '@nepoche/webb-ui-components/icons/create-icon';
+import { createIcon } from '../../icons/create-icon';
 import React, { useMemo } from 'react';
 
 import { LogoProps } from './types';

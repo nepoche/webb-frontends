@@ -1,4 +1,4 @@
 import { SwitchProps } from '@radix-ui/react-switch';
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { IWebbComponentBase } from '../../types';
 
-export interface SwitcherProps extends WebbComponentBase, SwitchProps {}
+export interface SwitcherProps extends IWebbComponentBase, SwitchProps {}

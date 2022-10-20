@@ -1,6 +1,6 @@
 import type { IdentityProps } from '@polkadot/react-identicon/types';
 
-import { WebbComponentBase } from '../../types';
+import { IWebbComponentBase } from '../../types';
 
 type IdenticonPickedKeys = 'theme' | 'value';
 
@@ -9,7 +9,7 @@ type IdenticonBaseProps = Pick<IdentityProps, IdenticonPickedKeys>;
 /**
  * Props for `Avatar` component
  */
-export interface AvatarProps extends WebbComponentBase, IdenticonBaseProps {
+export interface AvatarProps extends IWebbComponentBase, IdenticonBaseProps {
   /**
    * Size of avatar, `md`: 24px, `lg`: 48px (default: "md")
    */

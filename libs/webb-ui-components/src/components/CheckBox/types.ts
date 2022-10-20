@@ -1,4 +1,4 @@
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { WebbComponentBase } from '../../types';
 
 /**
  * CheckBox Props

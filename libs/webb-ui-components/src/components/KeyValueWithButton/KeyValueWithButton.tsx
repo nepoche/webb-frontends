@@ -1,6 +1,6 @@
-import { useCopyable } from '@nepoche/webb-ui-components/hooks';
-import { FileCopyLine } from '@nepoche/webb-ui-components/icons';
-import { shortenHex } from '@nepoche/webb-ui-components/utils';
+import { useCopyable } from '../../hooks';
+import { FileCopyLine } from '../../icons';
+import { shortenHex } from '../../utils';
 import cx from 'classnames';
 import { forwardRef, useCallback, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';

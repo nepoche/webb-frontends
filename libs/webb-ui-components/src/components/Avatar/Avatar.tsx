@@ -1,5 +1,5 @@
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
-import { Typography } from '@nepoche/webb-ui-components/typography';
+import { Typography } from '../../typography';
 import cx from 'classnames';
 import React, { useEffect, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';

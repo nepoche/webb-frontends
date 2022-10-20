@@ -1,9 +1,9 @@
-import { PropsOf, WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { PropsOf, IWebbComponentBase } from '../../types';
 
 /**
  * The `Tabs` props
  */
-export interface TabsProps extends WebbComponentBase {
+export interface TabsProps extends IWebbComponentBase {
   /**
    * The displayed values of tabs
    */
@@ -17,7 +17,7 @@ export interface TabsProps extends WebbComponentBase {
 /**
  * The `Tab` props
  */
-export interface TabProps extends PropsOf<'button'>, WebbComponentBase {
+export interface TabProps extends PropsOf<'button'>, IWebbComponentBase {
   /**
    * If `true`, indicate the tab is being actived
    */

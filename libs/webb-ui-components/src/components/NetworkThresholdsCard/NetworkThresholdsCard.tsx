@@ -1,5 +1,4 @@
-import { randRecentDate, randSoonDate } from '@ngneat/falso';
-import { Typography } from '@nepoche/webb-ui-components/typography';
+import { Typography } from '../../typography';
 import { forwardRef } from 'react';
 
 import { Button } from '../Button';
@@ -15,7 +14,7 @@ import { NetworkThresholdsCardProps } from './types';
  * The `NetworkThresholdsCard` component displays the network thresholds data
  *
  * ```jsx
- *  import { useNetworkThresholdsSeedData } from "@nepoche/webb-ui-components";
+ *  import { useNetworkThresholdsSeedData } from "../..";
  *
  *  const seedData = useNetworkThresholdsSeedData();
  *

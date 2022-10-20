@@ -1,5 +1,5 @@
 import { RowData, useReactTable } from '@tanstack/react-table';
-import { PropsOf, WebbComponentBase } from '@nepoche/webb-ui-components/types';
+import { PropsOf, WebbComponentBase, IWebbComponentBase } from '../../types';
 
 /**
  * The `Table` props
@@ -8,7 +8,7 @@ export interface TableProps<T extends RowData> extends WebbComponentBase {
   /**
    * The table object, the return result of `useReactTable` hook
    */
-  tableProps: ReturnType<typeof useReactTable<T>>;
+  tableProps: ReturnType<typeof useReactTable>;
   /**
    * Whether the table has pagination. If `true`, the `paginationProps` must be provided
    */
@@ -28,9 +28,9 @@ export interface TableProps<T extends RowData> extends WebbComponentBase {
 /**
  * The `THeader` props
  */
-export interface THeaderProps extends PropsOf<'th'>, WebbComponentBase {}
+export interface THeaderProps extends PropsOf<'th'>, IWebbComponentBase {}
 
 /**
  * The `TData` props
  */
-export interface TDataProps extends PropsOf<'td'>, WebbComponentBase {}
+export interface TDataProps extends PropsOf<'td'>, IWebbComponentBase {}

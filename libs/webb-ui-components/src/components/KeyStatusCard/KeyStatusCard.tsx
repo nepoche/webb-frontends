@@ -1,5 +1,4 @@
-import { Avatar, AvatarGroup, Button, Card, Chip } from '@nepoche/webb-ui-components/components';
-import { formatDateToUtc } from '@nepoche/webb-ui-components/utils';
+import { Avatar, AvatarGroup, Button, Card, Chip } from '..';
 import { Link } from 'react-router-dom';
 
 import { KeyValueWithButton } from '../KeyValueWithButton';

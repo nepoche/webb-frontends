@@ -1,6 +1,6 @@
 import { Updater } from '@tanstack/react-table';
-import { WebbComponentBase } from '@nepoche/webb-ui-components/types';
-import { PaginationItemsOptions } from '@nepoche/webb-ui-components/utils';
+import { WebbComponentBase } from '../../types';
+import { PaginationItemsOptions } from '../../utils';
 
 type PickedKeys = 'boundaryCount' | 'siblingCount';
 
