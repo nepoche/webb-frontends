@@ -1,3 +1,7 @@
-const config = require('../../postcss.config');
-
-module.exports = config;
+module.exports = {
+  plugins: {
+    'postcss-import': {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};

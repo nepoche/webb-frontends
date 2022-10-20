@@ -1,6 +1,6 @@
-import { getRoundedAmountString } from '@nepoche/webb-ui-components/utils';
-import { ChevronRight, TokenIcon } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
+import { getRoundedAmountString } from '../../utils';
+import { ChevronRight, TokenIcon } from '../../icons';
+import { Typography } from '../../typography';
 import cx from 'classnames';
 import { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';

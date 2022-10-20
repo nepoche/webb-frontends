@@ -20,7 +20,6 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@nepoche/bridge-dapp/*": ["apps/bridge-dapp/src/*"],
       "@nepoche/stats-dapp/*": ["apps/stats-dapp/src/*"],
       "@nepoche/abstract-api-provider": [
         "libs/abstract-api-provider/src/index.ts"

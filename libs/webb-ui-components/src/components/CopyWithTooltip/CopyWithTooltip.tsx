@@ -1,5 +1,5 @@
-import { useCopyable } from '@nepoche/webb-ui-components/hooks';
-import { FileCopyLine } from '@nepoche/webb-ui-components/icons';
+import { useCopyable } from '../../hooks';
+import { FileCopyLine } from '../../icons';
 import cx from 'classnames';
 import { useCallback } from 'react';
 import { twMerge } from 'tailwind-merge';

@@ -1,6 +1,6 @@
-import { ChevronRight, ExternalLinkLine } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
-import { shortenString } from '@nepoche/webb-ui-components/utils';
+import { ChevronRight, ExternalLinkLine } from '../../icons';
+import { Typography } from '../../typography';
+import { shortenString } from '../../utils';
 import { forwardRef } from 'react';
 
 import { Avatar } from '../Avatar';

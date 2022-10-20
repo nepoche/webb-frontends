@@ -1,5 +1,5 @@
-import { FilterIcon, Search } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
+import { FilterIcon, Search } from '../../icons';
+import { Typography } from '../../typography';
 import { forwardRef } from 'react';
 
 import { Button } from '../Button';

@@ -6,9 +6,9 @@ import {
   useProposalsOverviewLazyQuery,
   useProposalVotesLazyQuery,
   VoteStatus,
-} from '@nepoche/stats-dapp/generated/graphql';
-import { mapProposalListItem } from '@nepoche/stats-dapp/provider/hooks/mappers';
-import { Loadable, Page, PageInfoQuery, ProposalStatus } from '@nepoche/stats-dapp/provider/hooks/types';
+} from '../../generated/graphql';
+import { mapProposalListItem } from './mappers';
+import { Loadable, Page, PageInfoQuery, ProposalStatus } from './types';
 import { useEffect, useMemo, useState } from 'react';
 
 import { Threshold as QueryThreshold } from './types';

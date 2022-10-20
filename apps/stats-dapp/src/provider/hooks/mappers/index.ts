@@ -4,9 +4,8 @@ import {
   ProposalType,
   SessionAuthValidatorFragment,
   SessionAuthValidatorNodeFragment,
-} from '@nepoche/stats-dapp/generated/graphql';
-import { ProposalListItem } from '@nepoche/stats-dapp/provider/hooks';
-
+} from '../../../generated/graphql';
+import { ProposalListItem } from '..';
 export type Authority = {
   id: string;
   sessionId: string;

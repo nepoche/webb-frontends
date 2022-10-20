@@ -1,4 +1,4 @@
-import { useLastBlockQuery, useMetaDataQuery } from '@nepoche/stats-dapp/generated/graphql';
+import { useLastBlockQuery, useMetaDataQuery } from '../generated/graphql';
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 /**

@@ -4,13 +4,13 @@ import {
   useValidatorListingLazyQuery,
   useValidatorOfSessionLazyQuery,
   useValidatorSessionsLazyQuery,
-} from '@nepoche/stats-dapp/generated/graphql';
-import { mapAuthorities, mapSessionAuthValidatorNode } from '@nepoche/stats-dapp/provider/hooks/mappers';
-import { Loadable, Page, PageInfoQuery } from '@nepoche/stats-dapp/provider/hooks/types';
-import { useCurrentMetaData } from '@nepoche/stats-dapp/provider/hooks/useCurrentMetaData';
-import { PublicKey } from '@nepoche/stats-dapp/provider/hooks/useKeys';
-import { DiscreteList } from '@nepoche/stats-dapp/provider/hooks/useProposals';
-import { useActiveSession } from '@nepoche/stats-dapp/provider/stats-provider';
+} from '../../generated/graphql';
+import { mapAuthorities, mapSessionAuthValidatorNode } from './mappers';
+import { Loadable, Page, PageInfoQuery } from './types';
+import { useCurrentMetaData } from './useCurrentMetaData';
+import { PublicKey } from './useKeys';
+import { DiscreteList } from './useProposals';
+import { useActiveSession } from '../stats-provider';
 import { useEffect, useMemo, useState } from 'react';
 
 import { Threshold as QueryThreshold } from './types';

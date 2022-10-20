@@ -11,7 +11,8 @@ const path = require('path'),
   BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
   ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'),
   HtmlWebPackPlugin = require('html-webpack-plugin'),
-  CopyWebpackPlugin = require('copy-webpack-plugin');
+  CopyWebpackPlugin = require('copy-webpack-plugin'),
+  TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const findPackages = require('../../tools/scripts/findPackages');
 
@@ -22,6 +23,7 @@ const alias = findPackages().reduce((alias, { dir, name }) => {
 
   return alias;
 }, {});
+alias['@nepoche/stats-dapp'] = path.resolve(__dirname, `src`);
 
 const plugins = fs.existsSync(path.join(__dirname, 'src/public'))
   ? [
@@ -35,6 +37,10 @@ const plugins = fs.existsSync(path.join(__dirname, 'src/public'))
             },
           },
         ],
+      }),
+      new TsconfigPathsPlugin({
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '.css'],
+        configFile: path.resolve(__dirname, '../../tsconfig.base.json'),
       }),
     ]
   : [];
@@ -115,8 +121,8 @@ function createWebpackBase(env, mode = 'production') {
               ],
               plugins: [
                 isDevelopment && require.resolve('react-refresh/babel'),
-                '@babel/plugin-transform-runtime',
-                '@babel/plugin-proposal-class-properties',
+                ['@babel/plugin-transform-runtime', { "loose": false }],
+                ['@babel/plugin-proposal-class-properties', { "loose": false }],
                 'preval',
               ].filter(Boolean),
             },
@@ -337,5 +343,13 @@ function createWebpackBase(env, mode = 'production') {
     },
   };
 }
+
+// module.exports = (config, context) => {
+//   console.log('context: ', context);
+//   console.log('config: ', config);
+//   const webpackBase = createWebpackBase();
+
+//   return merge(config, webpackBase);
+// }
 
 module.exports = createWebpackBase;

@@ -1,4 +1,4 @@
-import { Loadable, Page } from '@nepoche/stats-dapp/provider/hooks/types';
+import { Loadable, Page } from '../provider/hooks/types';
 import { Spinner } from '@nepoche/ui-components/Spinner/Spinner';
 import { useMemo } from 'react';
 

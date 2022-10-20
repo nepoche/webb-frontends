@@ -4,10 +4,10 @@ import {
   usePublicKeysLazyQuery,
   useSessionKeyIdsLazyQuery,
   useSessionKeysLazyQuery,
-} from '@nepoche/stats-dapp/generated/graphql';
-import { mapAuthorities } from '@nepoche/stats-dapp/provider/hooks/mappers';
-import { useCurrentMetaData } from '@nepoche/stats-dapp/provider/hooks/useCurrentMetaData';
-import { useActiveSession, useStaticConfig } from '@nepoche/stats-dapp/provider/stats-provider';
+} from '../../generated/graphql';
+import { mapAuthorities } from './mappers';
+import { useCurrentMetaData } from './useCurrentMetaData';
+import { useActiveSession, useStaticConfig } from '../stats-provider';
 import { NonNullableArrayItem } from '@nepoche/webb-ui-components/types';
 import { useEffect, useState } from 'react';
 

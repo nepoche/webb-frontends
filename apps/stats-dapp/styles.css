@@ -1,15 +1,15 @@
 @import 'tailwindcss/base';
 
+@import './css/radix-ui.css';
+@import './css/typography.css';
+
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import '@nepoche/webb-ui-components/css/radix-ui.css';
-@import '@nepoche/webb-ui-components/css/typography.css';
-
 @layer base {
-  @import '@nepoche/webb-ui-components/css/layer-base.css';
+  @import './css/layer-base.css';
 }
 
 @layer components {
-  @import '@nepoche/webb-ui-components/css/layer-components.css';
+  @import './css/layer-components.css';
 }

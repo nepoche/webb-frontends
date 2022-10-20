@@ -1,5 +1,3 @@
-const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
-const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 
@@ -230,11 +228,8 @@ const animation = {
 module.exports = {
   mode: 'jit',
   content: [
-    join(
-      __dirname,
-      '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
-    ...createGlobPatternsForDependencies(__dirname),
+    './libs/**/src/**/*.{js,jsx,ts,tsx}',
+    './apps/**/src/**/*.{js,jsx,ts,tsx}'
   ],
   darkMode: 'class',
   theme: {

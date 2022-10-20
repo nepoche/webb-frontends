@@ -5,13 +5,20 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "project": "libs/webb-ui-components/package.json",
         "outputPath": "dist/libs/webb-ui-components",
-        "main": "libs/webb-ui-components/src/index.tsx",
+        "entryFile": "libs/webb-ui-components/src/index.ts",
         "tsConfig": "libs/webb-ui-components/tsconfig.lib.json",
-        "assets": ["libs/webb-ui-components/*.md"]
+        "format": ["esm", "cjs"],
+        "rollupConfig": [
+          "libs/webb-ui-components/rollup.config.js"
+        ],
+        "external": [
+          "react", "react-dom"
+        ]
       }
     },
     "publish": {

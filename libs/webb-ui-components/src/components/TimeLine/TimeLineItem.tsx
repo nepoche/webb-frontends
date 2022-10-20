@@ -1,6 +1,6 @@
-import { CheckboxCircleLine, ExternalLinkLine, Spinner } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
-import { shortenHex } from '@nepoche/webb-ui-components/utils';
+import { CheckboxCircleLine, ExternalLinkLine, Spinner } from '../../icons';
+import { Typography } from '../../typography';
+import { shortenHex } from '../../utils';
 import { formatDistanceToNow } from 'date-fns';
 import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';

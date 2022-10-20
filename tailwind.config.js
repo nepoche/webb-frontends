@@ -225,7 +225,10 @@ const animation = {
 
 module.exports = {
   mode: 'jit',
-  content: ['./packages/**/src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './libs/**/src/**/*.{js,jsx,ts,tsx}',
+    './apps/**/src/**/*.{js,jsx,ts,tsx}'
+  ],
   darkMode: 'class',
   theme: {
     extend: {

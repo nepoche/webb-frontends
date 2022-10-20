@@ -56,7 +56,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, r
   return (
     <div className={cx('inline-block', { 'w-full': isFullWidth })}>
       <Component
-        {...restProps}
         {...buttonProps}
         disabled={buttonProps.disabled || isLoading}
         className={cx(mergedClassName, { 'w-full': isFullWidth })}

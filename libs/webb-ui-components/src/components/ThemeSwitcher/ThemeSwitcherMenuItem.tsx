@@ -1,6 +1,6 @@
 import { Half2Icon } from '@radix-ui/react-icons';
-import { useDarkMode } from '@nepoche/webb-ui-components/hooks';
-import { MoonLine, SunLine } from '@nepoche/webb-ui-components/icons';
+import { useDarkMode } from '../../hooks';
+import { MoonLine, SunLine } from '../../icons';
 import { useMemo } from 'react';
 
 import { MenuItem } from '../MenuItem';

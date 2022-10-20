@@ -1,9 +1,19 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "outDir": "../../dist/libs/webb-ui-components",
+    "declarationDir": "../../dist/libs/webb-ui-components",
     "declaration": true,
-    "types": ["node"]
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "downlevelIteration": true,
+    "sourceMap": true,
+    "emitDeclarationOnly": true,
+    "module": "esnext",
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [

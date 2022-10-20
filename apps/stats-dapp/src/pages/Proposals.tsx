@@ -1,5 +1,5 @@
 import { ColumnDef, createColumnHelper, getCoreRowModel, Table as RTTable, useReactTable } from '@tanstack/react-table';
-import { useStatsContext } from '@nepoche/stats-dapp/provider/stats-provider';
+import { useStatsContext } from '../provider/stats-provider';
 import {
   Button,
   Card,

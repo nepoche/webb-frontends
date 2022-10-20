@@ -1,5 +1,5 @@
-import { ChevronRight, TokenIcon } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
+import { ChevronRight, TokenIcon } from '../../icons';
+import { Typography } from '../../typography';
 import { forwardRef } from 'react';
 
 import { Label } from '../Label';

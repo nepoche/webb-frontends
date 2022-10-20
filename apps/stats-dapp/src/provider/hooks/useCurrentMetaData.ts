@@ -1,5 +1,5 @@
-import { Loadable } from '@nepoche/stats-dapp/provider/hooks/types';
-import { Metadata, useStatsContext } from '@nepoche/stats-dapp/provider/stats-provider';
+import { Loadable } from './types';
+import { Metadata, useStatsContext } from '../stats-provider';
 import { useMemo } from 'react';
 
 export function useCurrentMetaData(): Loadable<Metadata> {

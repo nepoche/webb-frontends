@@ -1,4 +1,4 @@
-import { calculateDateProgress, formatDateToUtc } from '@nepoche/webb-ui-components/utils';
+import { calculateDateProgress, formatDateToUtc } from '../../utils';
 import React, { useEffect, useRef, useState } from 'react';
 
 import { LabelWithValue } from '../LabelWithValue';

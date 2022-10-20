@@ -1,8 +1,5 @@
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
-import { ChevronDown } from '@nepoche/webb-ui-components/icons';
-import cx from 'classnames';
 import { forwardRef } from 'react';
-import { twMerge } from 'tailwind-merge';
 
 import { DropdownButtonProps } from './types';
 

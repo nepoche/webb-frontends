@@ -1,5 +1,6 @@
 import { RankingInfo } from '@tanstack/match-sorter-utils';
 import { FilterFn } from '@tanstack/react-table';
+import React from 'react';
 
 /******************
  * DECLARE GLOBAL *
@@ -17,11 +18,7 @@ declare module '@tanstack/table-core' {
  * SYSTEM TYPES *
  ****************/
 
-/**
- * The base interface required all component to extends in their props
- */
-
-export interface WebbComponentBase extends React.HTMLAttributes<HTMLElement> {
+export interface IWebbComponentBase {
   /**
    * The tailwindcss className to override the style
    */
@@ -30,10 +27,16 @@ export interface WebbComponentBase extends React.HTMLAttributes<HTMLElement> {
    * Control dark mode using `js`, if it's empty, the component will control dark mode in `css`
    */
   darkMode?: boolean;
-  /**
-   * Children node
-   */
+
   children?: React.ReactNode | string;
+}
+
+/**
+ * The base interface required all component to extends in their props
+ */
+
+export interface WebbComponentBase extends React.HTMLAttributes<HTMLElement>, IWebbComponentBase {
+
 }
 
 /**

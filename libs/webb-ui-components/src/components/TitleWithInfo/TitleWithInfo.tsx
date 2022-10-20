@@ -1,6 +1,5 @@
-import { InformationLine } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
-import cx from 'classnames';
+import { InformationLine } from '../../icons';
+import { Typography } from '../../typography';
 import { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 

@@ -1,4 +1,4 @@
-import { useStatsContext } from '@nepoche/stats-dapp/provider/stats-provider';
+import { useStatsContext } from '../provider/stats-provider';
 import { Spinner } from '@nepoche/webb-ui-components/icons';
 import { Typography } from '@nepoche/webb-ui-components/typography';
 import { useMemo } from 'react';
