@@ -6,7 +6,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/webpack:webpack",
+      "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "development",
       "options": {
@@ -19,8 +19,8 @@
           "apps/stats-dapp/src/public/logo.png"
         ],
         "index": "apps/stats-dapp/src/public/index.html",
+        "generateIndexHtml": false,
         "baseHref": "/",
-        "styles": ["apps/stats-dapp/styles.css"],
         "scripts": [],
         "postcssConfig": "apps/stats-dapp/postcss.config.js",
         "webpackConfig": "apps/stats-dapp/webpack.config.js"
@@ -52,9 +52,10 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/webpack:dev-server",
+      "executor": "@nrwl/web:dev-server",
       "options": {
-        "buildTarget": "stats-dapp:build"
+        "buildTarget": "stats-dapp:build",
+        "webpackConfig": "apps/stats-dapp/webpack.config.js"
       },
       "configurations": {
         "production": {
