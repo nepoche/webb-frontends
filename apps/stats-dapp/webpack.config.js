@@ -123,6 +123,7 @@ function createWebpackBase(env, mode = 'production') {
                 isDevelopment && require.resolve('react-refresh/babel'),
                 ['@babel/plugin-transform-runtime', { "loose": false }],
                 ['@babel/plugin-proposal-class-properties', { "loose": false }],
+                ['@babel/plugin-proposal-private-methods', { "loose": false }],
                 'preval',
               ].filter(Boolean),
             },

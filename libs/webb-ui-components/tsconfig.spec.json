@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
-    "module": "commonjs",
-    "types": ["jest", "node"]
-  },
-  "include": ["jest.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/*.d.ts", "src/types/index.ts", "src/typography/types.ts", "src/components/Divider/types.ts", "src/components/CopyWithTooltip/types.ts", "src/components/Collapsible/types.ts", "src/components/Chip/types.ts", "src/components/CheckBox/types.ts", "src/components/CardTable/types.ts", "src/components/Card/types.ts", "src/components/Avatar/types.ts", "src/components/AvatarGroup/types.ts", "src/components/BridgeInputs/types.ts", "src/components/Button/types.ts", "src/provider/types.ts", "src/containers/WebbUIErrorBoudary/types.ts", "src/components/Tooltip/types.ts", "src/components/TokenSelector/types.ts", "src/components/TitleWithInfo/types.ts", "src/components/TimeLine/types.ts", "src/components/TimeProgress/types.ts", "src/components/Tabs/types.ts", "src/components/Table/types.ts", "src/components/Switcher/types.ts", "src/components/Stats/types.ts", "src/components/Slider/types.ts", "src/components/Progress/types.ts", "src/components/Pagination/types.ts", "src/components/NetworkThresholdsCard/types.ts", "src/components/MenuItem/types.ts", "src/components/Logo/types.ts", "src/components/LabelWithValue/types.ts", "src/components/Label/types.ts", "src/components/KeyValueWithButton/types.ts", "src/components/KeyStatusCard/types.ts", "src/components/KeyCard/types.ts", "src/components/Input/types.ts", "src/components/Filter/types.ts", "src/components/DropdownMenu/types.ts", "src/components/Dropdown/types.ts", "src/co, "src/icons/types.ts"mponents/Drawer/types.ts"]
-}

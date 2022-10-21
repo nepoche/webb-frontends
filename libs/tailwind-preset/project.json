@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-preset",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "root": "libs/tailwind-preset",
+  "sourceRoot": "libs/tailwind-preset",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/tailwind-preset",
+        "main": "libs/tailwind-preset/index.ts",
+        "tsConfig": "libs/tailwind-preset/tsconfig.lib.json"
+      }
+    }
+  },
+  "tags": []
+}
