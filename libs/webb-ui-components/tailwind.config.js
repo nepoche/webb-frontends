@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
-const config = require('../../tailwind.config');
-const merge = require('lodash.merge');
+const sharedTailwindConfig = require('../../libs/tailwind-preset/tailwind.config');
 
-const newConfig = merge(config, {
-  content: ['./src/**/*.{js,jsx,ts,tsx}', './.storybook/**/*.{js,jsx,ts,tsx}'], // Manually set the path for performance purpose
-});
+console.log('sharedTailwindConfig: ', sharedTailwindConfig)
 
-module.exports = newConfig;
+module.exports = {
+  presets: [sharedTailwindConfig],
+  mode: 'jit',
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', './.storybook/**/*.{js,jsx,ts,tsx}'
+  ],
+};

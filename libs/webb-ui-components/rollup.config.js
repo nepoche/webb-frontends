@@ -13,9 +13,9 @@ module.exports = (config) => {
       resolve(),
       copy({
         targets: [
-          { src: 'libs/webb-ui-components/src/tailwind.css', dest: 'dist/libs/webb-ui-components/' },
-          { src: 'libs/webb-ui-components/src/fonts/*', dest: 'dist/libs/webb-ui-components/fonts/' },
-          { src: 'libs/webb-ui-components/src/css/*', dest: 'dist/libs/webb-ui-components/css/' }
+          { src: 'libs/webb-ui-components/src/icons/tokens/*', dest: 'dist/libs/webb-ui-components/icons/tokens' },
+          // { src: 'libs/webb-ui-components/src/fonts/*', dest: 'dist/libs/webb-ui-components/fonts/' },
+          // { src: 'libs/webb-ui-components/src/css/*', dest: 'dist/libs/webb-ui-components/css/' }
         ]
       }),
       typescript({ tsconfig: 'libs/webb-ui-components/tsconfig.lib.json' }),
@@ -28,7 +28,6 @@ module.exports = (config) => {
         inject: {
           insertAt: "top",
         },
-        extract: "styles.css",
         external: ["react", "react-dom"],
       }),
       svgr(),

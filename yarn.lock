@@ -2887,35 +2887,6 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
-"@nepoche/webb-ui-components@0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@nepoche/webb-ui-components/-/webb-ui-components-0.0.1.tgz#e3a6513e813b169c4f29cbf114ef8e02be3e6b88"
-  integrity sha512-yHx02nl70gZumMJcVAHaviBFOOv0QQezwJ9mtTmFMSeN1unh7kMqh7fV1oJqHozB+xPj+NRgcl2MtB0sh+QihA==
-  dependencies:
-    "@ngneat/falso" "^6.1.0"
-    "@polkadot/react-identicon" "^2.9.9"
-    "@radix-ui/react-avatar" "^1.0.0"
-    "@radix-ui/react-collapsible" "^1.0.0"
-    "@radix-ui/react-dialog" "^1.0.0"
-    "@radix-ui/react-dropdown-menu" "^1.0.0"
-    "@radix-ui/react-icons" "^1.1.1"
-    "@radix-ui/react-label" "^1.0.0"
-    "@radix-ui/react-progress" "^1.0.0"
-    "@radix-ui/react-separator" "^1.0.0"
-    "@radix-ui/react-slider" "^1.0.0"
-    "@radix-ui/react-switch" "^1.0.0"
-    "@radix-ui/react-tooltip" "^1.0.0"
-    "@svgr/webpack" "^5.5.0"
-    "@tanstack/match-sorter-utils" "^8.1.1"
-    "@tanstack/react-table" "^8.5.13"
-    classnames "^2.3.1"
-    copy-to-clipboard "^3.3.2"
-    date-fns "^2.29.2"
-    date-fns-tz "^1.3.7"
-    react-table "^7.8.0"
-    tailwind-merge "^1.6.0"
-    tailwind-scrollbar "^2.0.1"
-
 "@ngneat/falso@^5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@ngneat/falso/-/falso-5.7.0.tgz#8ee827ec5e430f112d51979fefb31e4b66fddfd7"
@@ -6344,7 +6315,7 @@
   dependencies:
     defer-to-connect "^2.0.1"
 
-"@tailwindcss/forms@^0.5.2":
+"@tailwindcss/forms@0.5.3", "@tailwindcss/forms@^0.5.2":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.3.tgz#e4d7989686cbcaf416c53f1523df5225332a86e7"
   integrity sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==
@@ -19359,6 +19330,13 @@ postcss-nested@5.0.6:
   integrity sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==
   dependencies:
     postcss-selector-parser "^6.0.6"
+
+postcss-nested@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-6.0.0.tgz#1572f1984736578f360cffc7eb7dca69e30d1735"
+  integrity sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==
+  dependencies:
+    postcss-selector-parser "^6.0.10"
 
 postcss-normalize-charset@^5.1.0:
   version "5.1.0"
