@@ -6,7 +6,7 @@ const animation = require('./animation');
 const keyframes = require('./keyframes');
 
 const webbTheme = plugin(
-  function ({addBase, addComponents, theme, e}) {
+  function ({addBase, addComponents, addVariant, theme, e}) {
     const fonts = {
       '@font-face': [
         {
@@ -170,6 +170,28 @@ const webbTheme = plugin(
         body: darkhtml,
         div: darkmain,
       },
+      '@media (prefers-color-scheme: dark)': {
+        h1: darkheading,
+        h2: darkheading,
+        h3: darkheading,
+        h4: darkheading,
+        h5: darkheading,
+        p: darktext,
+        span: darktext,
+        label: darktext,
+        '.body1': darktext,
+        '.body2': darktext,
+        '.body3': darktext,
+        '.body4': darktext,
+        '.mono1': darktext,
+        '.mono2': darktext,
+        '.card': darkcard,
+        '.webb-shadow-sm': darkshadowsm,
+        '.webb-shadow-md': darkshadowmd,
+        html: darkhtml,
+        body: darkhtml,
+        div: darkmain,
+      }
     })
     addComponents({
       '.h1': {
@@ -314,6 +336,11 @@ const webbTheme = plugin(
         fontSize: '16px'
       }
     });
+
+    addVariant('dark', [
+      '@media (prefers-color-scheme: dark)',
+      '.dark &'
+    ]);
   },
   {
     theme: {
