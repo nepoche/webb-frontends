@@ -1,14 +1,13 @@
 // Copyright 2022 @webb-tools/
 // SPDX-License-Identifier: Apache-2.0
-const { merge } = require('webpack-merge');
-
 const path = require('path'),
   fs = require('fs'),
   webpack = require('webpack'),
   TerserPlugin = require('terser-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
   CssMinimizerPlugin = require('css-minimizer-webpack-plugin'),
-  BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
+  BundleAnalyzerPlugin =
+    require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
   ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'),
   HtmlWebPackPlugin = require('html-webpack-plugin'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
@@ -37,10 +36,6 @@ const plugins = fs.existsSync(path.join(__dirname, 'src/public'))
             },
           },
         ],
-      }),
-      new TsconfigPathsPlugin({
-        extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '.css'],
-        configFile: path.resolve(__dirname, '../../tsconfig.base.json'),
       }),
     ]
   : [];
@@ -80,6 +75,13 @@ function createWebpackBase(env, mode = 'production') {
 
       extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '.css'],
       modules: ['node_modules'],
+
+      plugins: [
+        new TsconfigPathsPlugin({
+          extensions: ['.tsx', '.ts', '.jsx', '.js', '.scss', '.css'],
+          configFile: path.resolve(__dirname, './tsconfig.app.json'),
+        }),
+      ],
 
       fallback: {
         assert: require.resolve('assert/'),
@@ -121,8 +123,10 @@ function createWebpackBase(env, mode = 'production') {
               ],
               plugins: [
                 isDevelopment && require.resolve('react-refresh/babel'),
-                ['@babel/plugin-transform-runtime', { "loose": false }],
-                ['@babel/plugin-proposal-class-properties', { "loose": false }],
+                ['@babel/plugin-transform-runtime', { loose: false }],
+                ['@babel/plugin-proposal-class-properties', { loose: false }],
+                ["@babel/plugin-proposal-private-property-in-object", { "loose": false }],
+                ["@babel/plugin-proposal-private-methods", { "loose": false }],
                 'preval',
               ].filter(Boolean),
             },
@@ -180,7 +184,10 @@ function createWebpackBase(env, mode = 'production') {
         // markdown
         {
           test: /\.md$/,
-          use: [require.resolve('html-loader'), require.resolve('markdown-loader')],
+          use: [
+            require.resolve('html-loader'),
+            require.resolve('markdown-loader'),
+          ],
         },
 
         // assets
@@ -215,7 +222,16 @@ function createWebpackBase(env, mode = 'production') {
 
         // assets
         {
-          test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.eot$/, /\.ttf$/, /\.woff$/, /\.woff2$/],
+          test: [
+            /\.bmp$/,
+            /\.gif$/,
+            /\.jpe?g$/,
+            /\.png$/,
+            /\.eot$/,
+            /\.ttf$/,
+            /\.woff$/,
+            /\.woff2$/,
+          ],
           include: [/semantic-ui-css/],
           use: [
             {
@@ -323,6 +339,15 @@ function createWebpackBase(env, mode = 'production') {
       host: '0.0.0.0',
       compress: true,
       allowedHosts: 'all',
+      // This option fix the error `originalOnListen is not a function` when using `webpack-dev-server`
+      onListening: function (devServer) {
+        if (!devServer) {
+          throw new Error('webpack-dev-server is not defined');
+        }
+
+        const port = devServer.server.address().port;
+        console.log('Listening on port:', port);
+      },
       hot: true,
       ...(isDevelopment
         ? {

@@ -1,12 +1,26 @@
 import { AnimatePresence } from 'framer-motion';
-import React, { cloneElement, createElement, FC, ReactElement, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router';
-import { HashRouter as Router, useLocation, useRoutes } from 'react-router-dom';
+import React, {
+  cloneElement,
+  createElement,
+  FC,
+  ReactElement,
+  useEffect,
+  useMemo,
+} from 'react';
+import {
+  HashRouter as Router,
+  useLocation,
+  useRoutes,
+  useNavigate,
+} from 'react-router-dom';
 
 import { StoreData, usePageTitle } from './store';
 
 /* HOC for set page title */
-const withTitle = (component: RouterConfigData['element'], title: string): FC => {
+const withTitle = (
+  component: RouterConfigData['element'],
+  title: string
+): FC => {
   const Inner: FC = () => {
     usePageTitle({ content: title });
 
@@ -68,7 +82,9 @@ export const RouterProvider: FC<Props> = ({ config }) => {
     inner.forEach((item) => {
       // process second level route
       if (item.children) {
-        item.element = cloneElement(item.element as ReactElement, { children: <Routes config={item.children} /> });
+        item.element = cloneElement(item.element as ReactElement, {
+          children: <Routes config={item.children} />,
+        });
       }
 
       // process redirect
@@ -78,7 +94,6 @@ export const RouterProvider: FC<Props> = ({ config }) => {
     });
 
     return inner;
-    /* eslint-disable-next-line  react-hooks/exhaustive-deps */
   }, [config]);
 
   return useMemo(
