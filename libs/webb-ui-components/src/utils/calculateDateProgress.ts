@@ -1,5 +1,5 @@
-import { compareAsc, differenceInMilliseconds, isValid } from 'date-fns';
-import { ISubQlTime } from '@nepoche/dapp-types';
+import { differenceInMilliseconds, isValid } from 'date-fns';
+import { ISubQlTime } from '../types';
 
 /**
  * Calculated the percentage of the current date have passed since the start date
@@ -29,7 +29,9 @@ export const calculateDateProgress = (
     return null;
   }
 
-  const diffBetweenStartAndEnd = Math.abs(startDate.getTime() - endDate.getTime());
+  const diffBetweenStartAndEnd = Math.abs(
+    startDate.getTime() - endDate.getTime()
+  );
   const diffBetweenStartAndNow = Math.abs(startDate.getTime() - currentTime);
 
   if (diffBetweenStartAndEnd === 0) {
@@ -38,5 +40,7 @@ export const calculateDateProgress = (
   if (diffBetweenStartAndNow > diffBetweenStartAndEnd) {
     return 100;
   }
-  return parseFloat(((diffBetweenStartAndNow / diffBetweenStartAndEnd) * 100).toFixed(2));
+  return parseFloat(
+    ((diffBetweenStartAndNow / diffBetweenStartAndEnd) * 100).toFixed(2)
+  );
 };

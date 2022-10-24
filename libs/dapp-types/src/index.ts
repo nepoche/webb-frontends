@@ -23,7 +23,3 @@ export const isZero = (value: string | number) => {
 
   return value === 0;
 };
-
-export type ISubQlTime = {
-  current: Date;
-};

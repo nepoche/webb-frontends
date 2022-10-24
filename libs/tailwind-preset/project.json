@@ -13,6 +13,13 @@
         "main": "libs/tailwind-preset/index.ts",
         "tsConfig": "libs/tailwind-preset/tsconfig.lib.json"
       }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs tailwind-preset {args.ver} {args.tag}"
+      },
+      "dependsOn": ["build"]
     }
   },
   "tags": []

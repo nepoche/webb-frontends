@@ -1,13 +1,23 @@
 import React from 'react';
 
-import { useDynamicSVGImport } from '../hooks';
+import { useDynamicSVGImport } from '../useDynamicSVGImport';
 import { TokenIconBase } from './types';
 import { getIconSizeInPixel } from './utils';
 
 export const TokenIcon: React.FC<TokenIconBase> = (props) => {
-  const { className, name, onCompleted, onError, size = 'md', ...restProps } = props;
+  const {
+    className,
+    name,
+    onCompleted,
+    onError,
+    size = 'md',
+    ...restProps
+  } = props;
 
-  const { SvgIcon, error, loading } = useDynamicSVGImport(name, { onCompleted, onError });
+  const { SvgIcon, error, loading } = useDynamicSVGImport(name, {
+    onCompleted,
+    onError,
+  });
 
   if (error) {
     return <span>{error.message}</span>;
@@ -19,7 +29,14 @@ export const TokenIcon: React.FC<TokenIconBase> = (props) => {
 
   if (SvgIcon) {
     const sizeInPx = getIconSizeInPixel(size);
-    return <SvgIcon className={className} width={parseInt(sizeInPx)} height={parseInt(sizeInPx)} {...restProps} />;
+    return (
+      <SvgIcon
+        className={className}
+        width={parseInt(sizeInPx)}
+        height={parseInt(sizeInPx)}
+        {...restProps}
+      />
+    );
   }
 
   return null;

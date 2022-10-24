@@ -1,6 +1,6 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import { Close } from '@nepoche/webb-ui-components/icons';
-import { PropsOf } from '@nepoche/webb-ui-components/types';
+import { Close } from '../../icons';
+import { PropsOf } from '../../types';
 import cx from 'classnames';
 import { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';

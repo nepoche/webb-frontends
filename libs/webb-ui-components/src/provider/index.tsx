@@ -1,15 +1,18 @@
 import { LoggerService } from '@webb-tools/app-util';
 import React, { createContext, useMemo } from 'react';
 
-import { WebbUIErrorBoudary } from '../containers';
-import { useDarkMode } from '../hooks';
+import { WebbUIErrorBoudary } from '../containers/WebbUIErrorBoudary';
+import { useDarkMode } from '../hooks/useDarkMode';
 import { IWebbUIContext, WebbUIProviderProps } from './types';
 
 export const WebbUIContext = createContext<null | IWebbUIContext>(null);
 
 const appLogger = LoggerService.new('Stats App');
 
-export const WebbUIProvider: React.FC<WebbUIProviderProps> = ({ children, hasErrorBoudary }) => {
+export const WebbUIProvider: React.FC<WebbUIProviderProps> = ({
+  children,
+  hasErrorBoudary,
+}) => {
   const [isDarkMode, toggleMode] = useDarkMode();
 
   const theme = useMemo<IWebbUIContext['theme']>(
@@ -21,13 +24,10 @@ export const WebbUIProvider: React.FC<WebbUIProviderProps> = ({ children, hasErr
   );
 
   const WebbUIEErrorBoundaryElement = useMemo(() => {
-    return React.createElement(
-      WebbUIErrorBoudary,
-      {
-        logger: appLogger,
-        children
-      },
-    );
+    return React.createElement(WebbUIErrorBoudary, {
+      logger: appLogger,
+      children,
+    });
   }, [children]);
 
   return (

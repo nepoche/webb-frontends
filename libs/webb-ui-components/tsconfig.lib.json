@@ -12,8 +12,9 @@
     "jsx": "react-jsx",
     "downlevelIteration": true,
     "sourceMap": true,
+    "noImplicitReturns": false,
     "emitDeclarationOnly": true,
-    "module": "esnext",
+    "module": "esnext"
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [
