@@ -31,13 +31,17 @@ export interface IWebbComponentBase {
   children?: React.ReactNode | string;
 }
 
+export type ISubQlTime = {
+  current: Date;
+};
+
 /**
  * The base interface required all component to extends in their props
  */
 
-export interface WebbComponentBase extends React.HTMLAttributes<HTMLElement>, IWebbComponentBase {
-
-}
+export interface WebbComponentBase
+  extends React.HTMLAttributes<HTMLElement>,
+    IWebbComponentBase {}
 
 /**
  * The `Keygen` type
@@ -92,12 +96,13 @@ export interface KeygenType {
 /**
  * Extract the props of a React element or component
  */
-export type PropsOf<T extends React.ElementType<any>> = React.ComponentPropsWithoutRef<T>;
+export type PropsOf<T extends React.ElementType<any>> =
+  React.ComponentPropsWithoutRef<T>;
 
 export type NullableUnknownType = unknown | null | undefined;
 
-export type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType extends readonly (infer ElementType)[]
-  ? ElementType
-  : never;
+export type ArrayElement<ArrayType extends readonly unknown[]> =
+  ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
 
-export type NonNullableArrayItem<T extends Array<NullableUnknownType>> = NonNullable<ArrayElement<T>>;
+export type NonNullableArrayItem<T extends Array<NullableUnknownType>> =
+  NonNullable<ArrayElement<T>>;

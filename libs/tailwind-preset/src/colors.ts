@@ -1,4 +1,3 @@
-
 const colors = {
   mono: {
     0: '#fff',
@@ -96,3 +95,5 @@ const colors = {
     DEFAULT: '#DD4800',
   },
 };
+
+export default colors;

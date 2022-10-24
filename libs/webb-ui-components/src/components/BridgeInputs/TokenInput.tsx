@@ -1,11 +1,13 @@
-import { getRoundedAmountString } from '@nepoche/webb-ui-components/utils';
-import { ChevronRight, TokenIcon } from '@nepoche/webb-ui-components/icons';
-import { Typography } from '@nepoche/webb-ui-components/typography';
 import cx from 'classnames';
 import { forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { ChevronRight, TokenIcon } from '../../icons';
+import { Typography } from '../../typography';
+import { getRoundedAmountString } from '../../utils';
 
-import { InputWrapper, Label, TitleWithInfo } from '..';
+import { Label } from '../Label';
+import { TitleWithInfo } from '../TitleWithInfo';
+import { InputWrapper } from './InputWrapper';
 import { TokenInputProps } from './types';
 
 /**
@@ -29,56 +31,62 @@ export const TokenInput = forwardRef<HTMLDivElement, TokenInputProps>(
       }
 
       if (token?.balanceInUsd) {
-        balanceInUsd = getRoundedAmountString(parseFloat(token.balanceInUsd.toString()));
+        balanceInUsd = getRoundedAmountString(
+          parseFloat(token.balanceInUsd.toString())
+        );
       }
 
       return [balance, balanceInUsd];
     }, [token]);
 
     return (
-      <InputWrapper {...props} className={twMerge(cx({ 'items-start': balance }), className)} ref={ref}>
-        <div className='flex flex-col space-y-1'>
+      <InputWrapper
+        {...props}
+        className={twMerge(cx({ 'items-start': balance }), className)}
+        ref={ref}
+      >
+        <div className="flex flex-col space-y-1">
           <Label htmlFor={id}>
             <TitleWithInfo
-              title='Token'
-              variant='body4'
+              title="Token"
+              variant="body4"
               info={info}
-              titleComponent='span'
-              className='text-mono-100 dark:text-mono-80'
-              titleClassName='uppercase !text-inherit'
+              titleComponent="span"
+              className="text-mono-100 dark:text-mono-80"
+              titleClassName="uppercase !text-inherit"
             />
           </Label>
 
           {token ? (
-            <p className='flex items-center space-x-1'>
-              <TokenIcon name={token.symbol.trim().toLowerCase()} size='lg' />
+            <p className="flex items-center space-x-1">
+              <TokenIcon name={token.symbol.trim().toLowerCase()} size="lg" />
 
-              <Typography component='span' variant='body1' fw='bold'>
+              <Typography component="span" variant="body1" fw="bold">
                 {token.symbol.trim().toUpperCase()}
               </Typography>
             </p>
           ) : (
-            <Typography variant='body1' fw='bold'>
+            <Typography variant="body1" fw="bold">
               Select token
             </Typography>
           )}
         </div>
 
         {balance ? (
-          <div className='flex flex-col items-end space-y-1'>
+          <div className="flex flex-col items-end space-y-1">
             <Typography
-              variant='body4'
-              fw='bold'
-              component='span'
-              className='uppercase text-mono-100 dark:text-mono-80'
+              variant="body4"
+              fw="bold"
+              component="span"
+              className="uppercase text-mono-100 dark:text-mono-80"
             >
               Balance: {balance} {balanceInUsd ? `≈ $${balanceInUsd}` : ''}
             </Typography>
 
-            <ChevronRight className='inline-block grow' />
+            <ChevronRight className="inline-block grow" />
           </div>
         ) : (
-          <ChevronRight className='inline-block' />
+          <ChevronRight className="inline-block" />
         )}
       </InputWrapper>
     );

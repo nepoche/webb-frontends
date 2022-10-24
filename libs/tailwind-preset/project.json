@@ -6,13 +6,23 @@
   "sourceRoot": "libs/tailwind-preset",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "project": "libs/tailwind-preset/package.json",
         "outputPath": "dist/libs/tailwind-preset",
-        "main": "libs/tailwind-preset/index.ts",
-        "tsConfig": "libs/tailwind-preset/tsconfig.lib.json"
+        "entryFile": "libs/tailwind-preset/index.ts",
+        "tsConfig": "libs/tailwind-preset/tsconfig.lib.json",
+        "format": ["esm", "cjs"],
+        "rollupConfig": ["libs/tailwind-preset/rollup.config.js"]
       }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs tailwind-preset {args.ver} {args.tag}"
+      },
+      "dependsOn": ["build"]
     }
   },
   "tags": []

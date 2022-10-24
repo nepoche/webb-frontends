@@ -185,6 +185,7 @@
     "react-table": "^7.8.0",
     "react-test-renderer": "18.2.0",
     "rollup-plugin-copy": "3.4.0",
+    "rollup-plugin-modify": "^3.0.0",
     "rollup-plugin-postcss": "4.0.2",
     "rollup-plugin-tailwind": "1.0.0",
     "sass": "^1.52.3",

@@ -13,19 +13,14 @@
     "allowJs": true,
     "skipLibCheck": true,
     "jsx": "react-jsx",
-    "downlevelIteration": true,
+    "downlevelIteration": true
   },
   "files": [],
   "include": [],
-  "typeRoots": [
-    "../../node_modules/@types",
-  ],
+  "typeRoots": ["../../node_modules/@types"],
   "references": [
     {
       "path": "./tsconfig.lib.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
     },
     {
       "path": "./.storybook/tsconfig.json"
