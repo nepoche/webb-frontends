@@ -40,7 +40,10 @@ export function getTextAlignClassName(textAlign: TypographyAlignValues) {
  * @param fontWeight Represent the font weight value
  * @returns tailwindcss className to style the `font-weight` attribute
  */
-export function getFontWeightClassName(variant: WebbTypographyVariant, fontWeight: TypographyFontWeightValues) {
+export function getFontWeightClassName(
+  variant: WebbTypographyVariant,
+  fontWeight: TypographyFontWeightValues
+) {
   // Monospace variant do not have `semibold` for font weight, so cast it to `bold`
   if (isMonospaceVariant(variant) && fontWeight === 'semibold') {
     return `font-bold`;
@@ -56,7 +59,9 @@ export function getFontWeightClassName(variant: WebbTypographyVariant, fontWeigh
  * @param variant Represent the value to check if it is the heading variant
  * @returns Whether the typography variant is heading variant
  */
-export function isHeadingVariant(variant: WebbTypographyVariant): variant is HeadingVariant {
+export function isHeadingVariant(
+  variant: WebbTypographyVariant
+): variant is HeadingVariant {
   const headingKeys = ['h1', 'h2', 'h3', 'h4', 'h5'];
   return headingKeys.indexOf(variant) !== -1;
 }
@@ -66,7 +71,15 @@ export function isHeadingVariant(variant: WebbTypographyVariant): variant is Hea
  * @param variant Represent the value to check if it is the monospace variant
  * @returns Whether the typography variant is monospace variant
  */
-export function isMonospaceVariant(variant: WebbTypographyVariant): variant is MonospaceVariant {
+export function isMonospaceVariant(
+  variant: WebbTypographyVariant
+): variant is MonospaceVariant {
   const monoKeys = ['mono1', 'mono2'];
   return monoKeys.indexOf(variant) !== -1;
+}
+
+export function getDefaultTextColor(variant: WebbTypographyVariant) {
+  return variant.startsWith('h')
+    ? 'text-mono-200 dark:text-mono-40'
+    : 'text-mono-160 dark:text-mono-60';
 }

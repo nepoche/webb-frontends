@@ -1,2 +1,2 @@
-export { default as config } from './tailwind.config';
-export { default as plugin } from './plugin';
+export { default as preset } from './src/preset';
+export { default as plugin } from './src/plugin';
