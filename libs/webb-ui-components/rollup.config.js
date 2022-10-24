@@ -4,6 +4,7 @@ const typescript = require('@rollup/plugin-typescript');
 const svgr = require('@svgr/rollup');
 const postcss = require('rollup-plugin-postcss');
 const copy = require('rollup-plugin-copy');
+const modify = require('rollup-plugin-modify');
 
 module.exports = (config) => {
   return {
@@ -42,6 +43,10 @@ module.exports = (config) => {
       }),
       svgr(),
       commonjs(),
+      modify({
+        find: '../icons/tokens/',
+        replace: './icons/tokens/',
+      }),
     ],
   };
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { DefaultTokenIcon } from './icons/DefaultTokenIcon';
+import { DefaultTokenIcon } from '../icons/DefaultTokenIcon';
 
 /**
  * Options for `useDynamicSVGImport` to import cryptocurrency icon dynamically
@@ -42,7 +42,7 @@ export function useDynamicSVGImport(
       try {
         ImportedIconRef.current = (
           await import(
-            `!!@svgr/webpack?+svgo,+titleProp,+ref!./icons/tokens/${_name}.svg`
+            `!!@svgr/webpack?+svgo,+titleProp,+ref!../icons/tokens/${_name}.svg`
           )
         ).default;
         onCompleted?.(_name, ImportedIconRef.current);
