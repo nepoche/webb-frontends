@@ -1,4 +1,4 @@
-import { useCopyable } from '../../hooks';
+import { useCopyable } from '@nepoche/ui-hooks';
 import { FileCopyLine } from '../../icons';
 import cx from 'classnames';
 import { useCallback } from 'react';

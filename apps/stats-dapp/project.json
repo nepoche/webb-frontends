@@ -22,7 +22,6 @@
         "generateIndexHtml": false,
         "baseHref": "/",
         "scripts": [],
-        "postcssConfig": "apps/stats-dapp/postcss.config.js",
         "webpackConfig": "apps/stats-dapp/webpack.config.js"
       },
       "configurations": {
