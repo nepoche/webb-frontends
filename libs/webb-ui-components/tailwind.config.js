@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
-const sharedTailwindConfig = require('../../libs/tailwind-preset/tailwind.config');
-
-console.log('sharedTailwindConfig: ', sharedTailwindConfig);
+const preset = require('@nepoche/tailwind-preset');
 
 module.exports = {
-  presets: [sharedTailwindConfig],
+  presets: [preset],
   mode: 'jit',
   content: [
     './src/**/*.{js,jsx,ts,tsx,css}',

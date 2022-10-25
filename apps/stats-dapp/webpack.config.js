@@ -123,10 +123,13 @@ function createWebpackBase(env, mode = 'production') {
               ],
               plugins: [
                 isDevelopment && require.resolve('react-refresh/babel'),
-                ['@babel/plugin-transform-runtime', { "loose": false }],
-                ['@babel/plugin-proposal-class-properties', { "loose": false }],
-                ["@babel/plugin-proposal-private-property-in-object", { "loose": false }],
-                ["@babel/plugin-proposal-private-methods", { "loose": false }],
+                ['@babel/plugin-transform-runtime', { loose: false }],
+                ['@babel/plugin-proposal-class-properties', { loose: false }],
+                [
+                  '@babel/plugin-proposal-private-property-in-object',
+                  { loose: false },
+                ],
+                ['@babel/plugin-proposal-private-methods', { loose: false }],
                 'preval',
               ].filter(Boolean),
             },

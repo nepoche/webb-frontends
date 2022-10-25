@@ -8,5 +8,5 @@
     "sourceMap": false,
     "types": ["node"]
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "index.js"]
 }

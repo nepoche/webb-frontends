@@ -69,7 +69,7 @@
         "libs/styled-components-theme/src/index.ts"
       ],
       "@nepoche/tailwind-plugin": ["libs/tailwind-plugin/src/index.js"],
-      "@nepoche/tailwind-preset": ["libs/tailwind-preset"],
+      "@nepoche/tailwind-preset": ["libs/tailwind-preset/index.js"],
       "@nepoche/ui-components": ["libs/ui-components/src/index.ts"],
       "@nepoche/ui-components/*": ["libs/ui-components/src/*"],
       "@nepoche/ui-hooks": ["libs/ui-hooks/src/index.ts"],
