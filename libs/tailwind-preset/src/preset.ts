@@ -4,7 +4,8 @@ import animation from './animation';
 import plugin from './plugin';
 
 export default {
-  darkMode: 'class',
+  darkMode: 'class' as const,
+  content: [] as string[],
   theme: {
     extend: {
       colors,
