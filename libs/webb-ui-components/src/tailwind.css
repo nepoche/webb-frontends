@@ -3,12 +3,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer base {
-  @import './css/layer-base.css';
-  @import './css/radix-ui.css';
-  @import './css/typography.css';
-}
+@import './css/layer-base.css';
+@import './css/radix-ui.css';
+@import './css/typography.css';
 
-@layer components {
-  @import './css/layer-components.css';
-}
+@import './css/layer-components.css';

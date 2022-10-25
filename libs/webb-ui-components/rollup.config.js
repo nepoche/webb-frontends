@@ -14,6 +14,23 @@ module.exports = (config) => {
       sourcemap: false,
     },
     plugins: [
+      postcss({
+        // config: {
+        //   path: 'libs/webb-ui-components/postcss.config.cjs',
+        // },
+        plugins: [
+          require('postcss-import'),
+          require('postcss-nested'),
+          require('tailwindcss/nesting'),
+          require('tailwindcss'),
+          require('autoprefixer'),
+        ],
+        extensions: ['.css'],
+        minimize: false,
+        extract: true,
+        inject: false,
+        external: ['react', 'react-dom'],
+      }),
       resolve(),
       copy({
         targets: [
@@ -29,17 +46,6 @@ module.exports = (config) => {
       }),
       typescript({
         tsconfig: 'libs/webb-ui-components/tsconfig.lib.json',
-      }),
-      postcss({
-        config: {
-          path: 'libs/webb-ui-components/postcss.config.cjs',
-        },
-        extensions: ['.css'],
-        minimize: false,
-        extract: true,
-        module: true,
-        inject: false,
-        external: ['react', 'react-dom'],
       }),
       svgr(),
       commonjs(),
