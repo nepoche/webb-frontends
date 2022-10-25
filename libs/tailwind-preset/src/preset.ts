@@ -1,7 +1,7 @@
 import colors from './colors';
 import keyframes from './keyframes';
 import animation from './animation';
-import plugin from './plugin';
+import { webbTheme } from './plugin';
 
 export default {
   darkMode: 'class',
@@ -16,7 +16,7 @@ export default {
     extends: {},
   },
   plugins: [
-    plugin,
+    webbTheme,
     require('@tailwindcss/forms'),
     require('tailwindcss-radix')(),
     require('tailwind-scrollbar')({ nocompatible: true }),

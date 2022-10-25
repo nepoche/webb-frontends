@@ -5,7 +5,7 @@ import colors from './colors';
 import keyframes from './keyframes';
 import animation from './animation';
 
-const webbTheme = plugin(
+export const webbTheme = plugin(
   function ({ addBase, addComponents, theme, e }) {
     const darkheading = {
       textColor: `${theme('colors.mono.40') ?? ''}`,
@@ -294,5 +294,3 @@ const webbTheme = plugin(
     },
   }
 );
-
-export default webbTheme;

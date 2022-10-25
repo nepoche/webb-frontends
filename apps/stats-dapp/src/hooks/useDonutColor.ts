@@ -2,10 +2,11 @@ import { useDarkMode } from '@nepoche/webb-ui-components/hooks';
 import { WebbColorsType } from '../../types/index.js';
 import resolveConfig from 'tailwindcss/resolveConfig';
 
-import tailwindConfig from /* preval */ '../../tailwind.config.js';
+import config from /* preval */ '../../tailwind.config';
+
 import { DonutDataType } from '../containers/DonutChartContainer/types';
 
-const fullConfig = resolveConfig(tailwindConfig);
+const fullConfig = resolveConfig(config);
 
 /**
  * Get the color for donut chart
