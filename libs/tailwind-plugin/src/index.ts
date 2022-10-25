@@ -6,7 +6,7 @@ import keyframes from './keyframes';
 import animation from './animation';
 
 const webbTheme = plugin(
-  function ({ addBase, addComponents, theme, e }) {
+  function ({ addBase, addComponents, theme }) {
     const darkheading = {
       textColor: `${theme('colors.mono.40') ?? ''}`,
     };
